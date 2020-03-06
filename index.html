@@ -19,50 +19,122 @@
                 computerSelection  = computerPlay();
 
                 if(playerSelection.toLowerCase() == computerSelection.toLowerCase()) {
-                    alert( "Tie");
+                    return 3;
                 }
                 else if(playerSelection.toLowerCase() == "rock") {
                     if (computerSelection == "Scissors"){
-                        alert( "You win!");
+                        return 1;
                     }
                     else {
-                        alert("Computer Won");
+                        return 2;
                     }
                 }
                 else if (playerSelection.toLowerCase() == "paper") {
                     if (computerSelection == "Rock") {
-                        alert("You win!");
+                        return 1;
                     }
                     else {
-                        alert("Computer won!");
+                        return 2;
                     }
                 }
                 else if (playerSelection.toLowerCase() == "scissors") {
                     if (computerSelection == "Rock") {
-                        alert("You lost!");
+                        return 2;
                     }
                     else {
-                        alert("You win!");
+                        return 1;
                     }
                     
 
                 }
                 else {
-                    alert("Thats not a valid play. Check spelling.")
+                    return 4;
                 }
                 }
+                function game() {
+                    let playerScore = 0;
+                    let compScore = 0;
+                    let ties = 0;
+                let result1 = playRound(playerSelection,computerSelection);
+                if (result1 == 1) {
+                    playerScore++;
+                    console.log("You win - " + "Your score: " + playerScore.toString());
+                    
+                }
+                else if (result1 == 2) {
+                    compScore++;
+                    console.log("Computer Won - " + " Computer's Score: " + compScore.toString());
+                    
+                }
+                else if (result1 == 3) {
+                    ties++
+                    console.log("Tie!");
+                }
+                else {
+                    console.log("Invalid input, check your spelling.");
+                }
+                let result2 = playRound(playerSelection,computerSelection);
+                if (result2 == 1) {
+                    console.log("You win");
+                }
+                else if (result2 == 2) {
+                    console.log("Computer Won");
+                }
+                else if (result2 == 3) {
+                    console.log("Tie!");
+                }
+                else {
+                    console.log("Invalid input, check your spelling.");
+                }
+                let result3 = playRound(playerSelection,computerSelection);
+                if (result3 == 1) {
+                    console.log("You win");
+                }
+                else if (result3 == 2) {
+                    console.log("Computer Won");
+                }
+                else if (result3 == 3) {
+                    console.log("Tie!");
+                }
+                else {
+                    console.log("Invalid input, check your spelling.");
+                }
+                let result4 = playRound(playerSelection,computerSelection);
+                if (result4 == 1) {
+                    console.log("You win");
+                }
+                else if (result4 == 2) {
+                    console.log("Computer Won");
+                }
+                else if (result4 == 3) {
+                    console.log("Tie!");
+                }
+                else {
+                    console.log("Invalid input, check your spelling.");
+                }
+                let result5 = playRound(playerSelection,computerSelection);
+                if (result5 == 1) {
+                    console.log("You win");
+                }
+                else if (result5 == 2) {
+                    console.log("Computer Won");
+                }
+                else if (result5 == 3) {
+                    console.log("Tie!");
+                }
+                else {
+                    console.log("Invalid input, check your spelling.");
+                }
 
-            function game() {
-                playRound(playerSelection, computerSelection);
-                playRound(playerSelection, computerSelection);
-                playRound(playerSelection, computerSelection);
-                playRound(playerSelection, computerSelection);
-                playRound(playerSelection, computerSelection);
 
 
+                    
+                }
                 
-            }
-            game();
+                
+                game();
+
+            
             
         </script>
     </body>
