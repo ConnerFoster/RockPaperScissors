@@ -6,51 +6,63 @@
     <body>
         <script>
             const words = ["Rock", "Paper", "Scissors"];
-            const playerSelection = prompt("Your turn! Enter rock, paper, or scissors. ")
-            const computerSelection = computerPlay();
+            let playerSelection = "rock";
+            let computerSelection  = "rock";
             
             function computerPlay() {
                 compWord = words[Math.floor(Math.random()*words.length)];
                 return compWord;
                 
                 }
-            function playRound(playerSelection, computerSelection){
+            function playRound(playerSelection, computerSelection) {
+                playerSelection = prompt("Your turn! Enter rock, paper, or scissors. ")
+                computerSelection  = computerPlay();
+
                 if(playerSelection.toLowerCase() == computerSelection.toLowerCase()) {
-                    return "Tie";
+                    alert( "Tie");
                 }
                 else if(playerSelection.toLowerCase() == "rock") {
                     if (computerSelection == "Scissors"){
-                        return "You win!";
+                        alert( "You win!");
                     }
                     else {
-                        return "Computer Won";
+                        alert("Computer Won");
                     }
                 }
                 else if (playerSelection.toLowerCase() == "paper") {
                     if (computerSelection == "Rock") {
-                        return "You win!";
+                        alert("You win!");
                     }
                     else {
-                        return "Computer won!";
+                        alert("Computer won!");
                     }
                 }
                 else if (playerSelection.toLowerCase() == "scissors") {
                     if (computerSelection == "Rock") {
-                        return "You lost!";
+                        alert("You lost!");
                     }
                     else {
-                        return "You win!";
+                        alert("You win!");
                     }
                     
 
                 }
                 else {
-                    return "Thats not a valid play. Check spelling."
+                    alert("Thats not a valid play. Check spelling.")
                 }
                 }
 
-            console.log(playRound(playerSelection, computerSelection));
-            
+            function game() {
+                playRound(playerSelection, computerSelection);
+                playRound(playerSelection, computerSelection);
+                playRound(playerSelection, computerSelection);
+                playRound(playerSelection, computerSelection);
+                playRound(playerSelection, computerSelection);
+
+
+                
+            }
+            game();
             
         </script>
     </body>
