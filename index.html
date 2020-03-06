@@ -75,10 +75,12 @@
                 }
                 let result2 = playRound(playerSelection,computerSelection);
                 if (result2 == 1) {
-                    console.log("You win");
+                    playerScore++;
+                    console.log("You win - " + "Your Score: " + playerScore.toString());
                 }
                 else if (result2 == 2) {
-                    console.log("Computer Won");
+                    compScore++;
+                    console.log("Computer Won - " +"Computer's Score: " + compScore.toString());
                 }
                 else if (result2 == 3) {
                     console.log("Tie!");
@@ -88,10 +90,12 @@
                 }
                 let result3 = playRound(playerSelection,computerSelection);
                 if (result3 == 1) {
-                    console.log("You win");
+                    playerScore++
+                    console.log("You win - " + "Your Score: " + playerScore.toString());
                 }
                 else if (result3 == 2) {
-                    console.log("Computer Won");
+                    compScore++
+                    console.log("Computer Won - " + "Computer's Score: " + compScore.toString());
                 }
                 else if (result3 == 3) {
                     console.log("Tie!");
@@ -101,10 +105,12 @@
                 }
                 let result4 = playRound(playerSelection,computerSelection);
                 if (result4 == 1) {
-                    console.log("You win");
+                    playerScore++
+                    console.log("You win - Your Score: " + playerScore.toString());
                 }
                 else if (result4 == 2) {
-                    console.log("Computer Won");
+                    compScore++
+                    console.log("Computer Won - Computer's Score: " + compScore.toString());
                 }
                 else if (result4 == 3) {
                     console.log("Tie!");
@@ -114,16 +120,25 @@
                 }
                 let result5 = playRound(playerSelection,computerSelection);
                 if (result5 == 1) {
-                    console.log("You win");
+                    playerScore++
+                    console.log("You win - Your Score: " + playerScore.toString());
                 }
                 else if (result5 == 2) {
-                    console.log("Computer Won");
+                    compScore++
+                    console.log("Computer Won - Computer's Score: " + compScore.toString());
                 }
                 else if (result5 == 3) {
                     console.log("Tie!");
                 }
                 else {
                     console.log("Invalid input, check your spelling.");
+                }
+
+                if (playerScore > compScore) {
+                    console.log("Player wins! Way to show the computer who's boss!")
+                }
+                else {
+                    console.log("Computer wins. Better luck next time!")
                 }
 
 
