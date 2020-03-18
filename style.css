@@ -6,7 +6,8 @@ body {
 #container {
     display: flex;
     padding-top: 8%;
-    padding-left: 35%;
+    /*padding-left: 35%;*/
+    justify-content: center;
     
     
 
