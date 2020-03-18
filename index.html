@@ -2,141 +2,44 @@
 <html>
     <head>
         <title>RockPaperScissors</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
     </head>
     <body>
-        <script>
-            const words = ["Rock", "Paper", "Scissors"];
-            let playerSelection = 'Rock';
-            let computerSelection = 'Rock';
+      <div id="main-program">
+        <div id="top">
+            <h1 id="left">Rock Paper Scissors</h1>
+            <h3 id="right">Best of 5</h3>
+        </div>
+        <div id="container">
+          <div id="rock">
+              <image src="rock.png" width=200 height=200 alt="rock"></image>
+          </div>
+          <div id="paper">
+            <image src="paper.png" width=200 height=200 alt="paper"></image>
+          </div>
+          <div id="scissors">
+            <image src="scissors.png" width=200 height=200 alt="paper"></image>
 
-            function computerPlay() {
-                compWord = words[Math.floor(Math.random()*words.length)];
-                return compWord;
-            }
-            function playRound(playerSelection, computerSelection) {
-                playerSelection = prompt("Your turn! Enter rock, paper, or scissors. ");
-                computerSelection = computerPlay();
-                playerSelection = playerSelection.toLowerCase();
-                computerSelection = computerSelection.toLowerCase();
-                //console.log(playerSelection, computerSelection);
-                while(playerSelection == computerSelection) {
-                    console.log("Tie! Try again");
-                    playerSelection = prompt("Enter rock, paper, or scissors. ");
-                    playerSelection = playerSelection.toLowerCase();
-                    computerSelection = computerPlay();
-                    computerSelection = computerSelection.toLowerCase();
-                }
-                if (playerSelection == 'rock'){
-                    if (computerSelection == 'scissors') {
-                        return 1;
-                    }
-                    else{
-                        return 2;
-                    }
-                }
-                if (playerSelection == 'paper') {
-                    if (computerSelection == 'rock'){
-                        return 1;
-                    }
-                    else {
-                        return 2;
-                    }
-                }
-                if (playerSelection == 'scissors') {
-                    if (computerSelection == 'paper') {
-                        return 1;
-                    }
-                    else {
-                        return 2;
-                    }
-                }
-                else {
-                    return 3;
-                }
-            }
-            
-            function game() {
-                let playerScore = 0;
-                let compScore = 0;
-                result1 = playRound(playerSelection, computerSelection);
-                if (result1 == 1){
-                    playerScore++;
-                    console.log("You won that round - Your Score: " + playerScore.toString() + " | Computer's Score: " + compScore.toString());
-                }
-                else if (result1 == 2){
-                    compScore++;
-                    console.log("Computer won that round - Your Score: " + playerScore.toString() + " | Computer's Score: " + compScore.toString());
-                }
-                else {
-                    console.log("Invalid input. Check your spelling. ")
-                }
-                result2 = playRound(playerSelection, computerSelection);
-                if (result2 == 1){
-                    playerScore++;
-                    console.log("You won that round - Your Score: " + playerScore.toString() + " | Computer's Score: " + compScore.toString());
-                }
-                else if (result2 == 2){
-                    compScore++;
-                    console.log("Computer won that round - Your Score: " + playerScore.toString() + " | Computer's Score: " + compScore.toString());
-                }
-                else {
-                    console.log("Invalid input. Check your spelling. ")
-                }
-                result3 = playRound(playerSelection, computerSelection);
-                if (result3 == 1){
-                    playerScore++;
-                    console.log("You won that round - Your Score: " + playerScore.toString() + " | Computer's Score: " + compScore.toString());
-                }
-                else if (result3 == 2){
-                    compScore++;
-                    console.log("Computer won that round - Your Score: " + playerScore.toString() + " | Computer's Score: " + compScore.toString());
-                }
-                else {
-                    console.log("Invalid input. Check your spelling. ")
-                }
-                result4 = playRound(playerSelection, computerSelection);
-                if (result4 == 1){
-                    playerScore++;
-                    console.log("You won that round - Your Score: " + playerScore.toString() + " | Computer's Score: " + compScore.toString());
-                }
-                else if (result4 == 2){
-                    compScore++;
-                    console.log("Computer won that round - Your Score: " + playerScore.toString() + " | Computer's Score: " + compScore.toString());
-                }
-                else {
-                    console.log("Invalid input. Check your spelling. ")
-                }
-                result5 = playRound(playerSelection, computerSelection);
-                if (result5 == 1){
-                    playerScore++;
-                    console.log("You won that round - Your Score: " + playerScore.toString() + " | Computer's Score: " + compScore.toString());
-                }
-                else if (result5 == 2){
-                    compScore++;
-                    console.log("Computer won that round - Your Score: " + playerScore.toString() + " | Computer's Score: " + compScore.toString());
-                }
-                else {
-                    console.log("Invalid input. Check your spelling. ")
-                }
-                if(playerScore > compScore){
-                    console.log("Player wins! Way to show the machine who's boss.");
-                }
-                else if (compScore > playerScore){
-                    console.log("Computer won. Better luck next time. ");
-                }
-                else {
-                    console.log("Tie. Hmmmm...Play again?");
-                }
+          </div>
+          
+        </div>
+        <br>
+        
+        <div id="status" class= "display">
+          
+        </div>
+        <br>
+        <div id="player" class ="display">
 
-                
-                
+        </div>
+        <br>
+        <div id="comp" class = "display">
 
-                
-            }
-            game();
-            
-            
-            </script>
+        </div>
+        
+<br>
+        
+        </div>
     </body>
+    <script src="main.js"></script>
 </html>
-

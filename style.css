@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+body {
+    background-color: rgba(61,169,169,0.2);
+}
+#container {
+    display: flex;
+    padding-top: 8%;
+    padding-left: 35%;
+    
+    
+
+
+}
+h1 {
+    font-family: 'inconsolata', monospace;
+    
+}
+h2 {
+    font-family: 'inconsolata', monospace;
+
+}
+#top {
+    margin: auto;
+    padding-left: 3em;
+    
+}
+.display {
+    font-family: 'inconsolata', monospace;
+    font-size: 25px;
+    padding-left: 2em;
+    
+}
+.transformed {
+    transform: scale(1.1);
+}
+h3 {
+    font-family: 'inconsolata', monospace;
+}
